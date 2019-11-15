@@ -11,6 +11,8 @@ import { Usuario } from 'src/app/Modelo/Usuario';
 })
 export class ListarComponent implements OnInit {
 
+  usuario : Usuario = new Usuario();
+  entity: Usuario = {};
   usuarios:Usuario[];
   constructor(private service:ServiceService, private router:Router) { }
 
@@ -18,6 +20,11 @@ export class ListarComponent implements OnInit {
     this.service.all().then(data=>{
       this.usuarios=data;
     })
+  }
+
+  Editar(usuario: Usuario){
+    localStorage.setItem('id', usuario.id.toString());
+      this.router.navigate(['editar']); 
   }
 
 

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ListarComponent } from './Usuario/listar/listar.component';
 import { AgregarComponent } from './Usuario/agregar/agregar.component';
 import { EditarComponent } from './Usuario/editar/editar.component';
-import {FormsModule}from '@angular/forms'
+import {FormsModule, ReactiveFormsModule}from '@angular/forms'
 import { ServiceService } from './service/service.service';
 import {HttpClientModule}from '@angular/common/http'
 
@@ -22,7 +22,8 @@ import {HttpClientModule}from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

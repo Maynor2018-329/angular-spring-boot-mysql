@@ -1,5 +1,8 @@
 export class Usuario{
-    id:number;
-    nombre:String;
-    cargo:String;
+    constructor(
+        public id?: number,
+        public nombre?: string,
+        public cargo?: string
+    ){
+    }
 }
